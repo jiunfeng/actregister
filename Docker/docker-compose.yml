@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  apache2:
+    image: ubuntu/apache2:edge
+    container_name: apache
+    volumes:
+      - ../actregister:/var/www/html
+    command: [ "tail", "-f", "/dev/null" ]
+    ports:
+      - 8080:80
