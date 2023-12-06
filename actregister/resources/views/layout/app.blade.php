@@ -21,12 +21,14 @@
 <style>
     /* 開發途中使用 用來確認框架範圍 後續要拿掉 */
     div[class|="col"] {
-        background-color: #ebdef0;
+        background-color: var(--color-4);
         border: 0.5px solid purple;
         text-align: center;
     }
 
-    .container .topbar {}
+    .navbar {
+        background-color: #000000;
+    }
 </style>
 
 <body>
@@ -37,18 +39,17 @@
             </div>
         </div>
         <div class="row carousel">
-            <div class="col">
-                <img src="https://fakeimg.pl/1024x400/C00CCC" alt="幻燈片">
-                <p>幻燈片</p>
+            <div class="col-2"></div>
+            <div class="col-8">
+                @include('layout.carousel')
             </div>
+            <div class="col-2"></div>
         </div>
     </div>
     <div class="container">
-
-
         <div class="row mainbar">
             <div class="col">
-                <p>main bar</p>
+                @include('layout.mainbar')
             </div>
         </div>
         <div class="row context">
@@ -56,14 +57,16 @@
                 <div class="container">
                     <div class="row sidebar01">
                         <div class="col">
-                            <br><br>
-                            <p>sidebar01</p>
-                            <br><br>
+                            <img src="https://fakeimg.pl/200x150/200" alt="">
+                            <img src="https://fakeimg.pl/200x150/200" alt="">
+                            <img src="https://fakeimg.pl/200x150/200" alt="">
+
                         </div>
 
                     </div>
                     <div class="row sidebar02">
                         <div class="col">
+                            <h3>其他服務</h3>
                             <br><br>
                             <p>sidebar02</p>
                             <br><br>
