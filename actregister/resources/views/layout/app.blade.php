@@ -24,6 +24,19 @@
         border: 0.5px solid purple;
         text-align: center;
     }
+
+    /* 輪播高度自適應 */
+    .d-block {
+        height: 50vh;
+    }
+
+    .carousel div[class|="col"] {
+        background-color: var(--bargc-3);
+        padding: 10px;
+        margin-top: 50px;
+
+
+    }
 </style>
 
 
