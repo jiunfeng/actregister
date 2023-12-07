@@ -2,6 +2,7 @@
 
 /* 配色表通常從美術來設定好做為變數可以引用 root為最上層*/
 :root {
+
     --mc01: #F3CDA9;
     --mc02: #EE592E;
     --mc03: #774836;
@@ -11,10 +12,10 @@
     --mc07: rgba(0, 0, 0, 0.171);
     --textcolor01: #2ba85b;
     --textcolor03: rgb(15, 17, 173);
-    --color-1: #59d66d;
+    --bargc-1: #59d66d;
     --color-2: #5cd895;
     --color-3: #5fdabc;
-    --color-4: #63d5dc;
+    --bargc-2: #63d5dc;
     --color-5: #66b3de;
     --color-5: #61DB74;
 

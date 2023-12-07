@@ -21,22 +21,21 @@
 <style>
     /* 開發途中使用 用來確認框架範圍 後續要拿掉 */
     div[class|="col"] {
-        background-color: var(--color-4);
+        background-color: var(--mc04);
         border: 0.5px solid purple;
         text-align: center;
     }
-
-    .navbar {
-        background-color: #000000;
-    }
 </style>
+
 
 <body>
     <div class="container-fluid">
         <div class="row topbar">
-            <div class="col">
+            <div class="col-2"></div>
+            <div class="col-8 " style="padding: 0;">
                 @include('layout.memberbar')
             </div>
+            <div class="col-2"></div>
         </div>
         <div class="row carousel">
             <div class="col-2"></div>
