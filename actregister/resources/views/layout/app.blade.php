@@ -31,7 +31,7 @@
     }
 
     .carousel div[class|="col"] {
-        background-color: var(--bargc-3);
+        background-image: url("{{asset('img/carousel_bg.jpg')}}");
         padding: 10px;
         margin-top: 50px;
 
@@ -50,11 +50,11 @@
             <div class="col-2"></div>
         </div>
         <div class="row carousel">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-2 d-none d-md-block"></div>
+            <div class="col-8 d-none d-md-block">
                 @include('layout.carousel')
             </div>
-            <div class="col-2"></div>
+            <div class="col-2 d-none d-md-block"></div>
         </div>
     </div>
     <div class="container">
