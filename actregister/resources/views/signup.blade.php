@@ -1,0 +1,9 @@
+@extends('layout.app')
+@section('title')
+線上報名
+@endsection
+@section('page')
+<br><br><br><br><br>
+<p>線上報名</p>
+<br><br><br><br>
+@endsection

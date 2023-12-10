@@ -1,0 +1,9 @@
+@extends('layout.app')
+@section('title')
+聯絡我們
+@endsection
+@section('page')
+<br><br><br><br><br>
+<p>聯絡我們</p>
+<br><br><br><br>
+@endsection

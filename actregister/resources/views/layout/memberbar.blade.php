@@ -104,24 +104,35 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Link
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <a class="nav-link" href="#"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Link</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">首頁</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">最新消息</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">賽事公告</a>
+                </li>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">線上報名</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">會員中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ｑ＆Ａ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">聯絡我們</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">後台模式</a>
                 </li>
             </ul>
             {{-- member存在的導覽列 end--}}

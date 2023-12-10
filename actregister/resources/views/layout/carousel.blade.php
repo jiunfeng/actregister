@@ -1,5 +1,5 @@
 {{-- 首頁布局輪播功能 --}}
-<div id="carouselExampleCaptions" class="carousel slide d-none d-md-block carousel-fade">
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>

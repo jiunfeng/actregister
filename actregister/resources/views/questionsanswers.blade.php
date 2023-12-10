@@ -1,0 +1,9 @@
+@extends('layout.app')
+@section('title')
+Ｑ＆Ａ
+@endsection
+@section('page')
+<br><br><br><br><br>
+<p>Ｑ＆Ａ</p>
+<br><br><br><br>
+@endsection

@@ -1,6 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\mainbar\{
+    AnnouncementsController,
+    NewsController,
+    SignupController,
+    MemberCenterController,
+    QuestionsAnswersController,
+    ContactUsController
+};
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +29,12 @@ Route::get('/', function () {
 Route::get('index', function () {
     return view('layout.app');
 });
+
+// web mainbar 路由控制
+
+Route::get('news', [NewsController::class, 'news'])->name('news');
+Route::get('announcements', [AnnouncementsController::class, 'announcements'])->name('announcements');
+Route::get('signup', [SignupController::class, 'signup'])->name('signup');
+Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter');
+Route::get('questionsanswers', [QuestionsAnswersController::class, 'questionsanswers'])->name('questionsanswers');
+Route::get('contactus', [ContactUsController::class, 'contactus'])->name('contactus');

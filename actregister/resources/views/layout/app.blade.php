@@ -19,6 +19,10 @@
 
 <style>
     /* 開發途中使用 用來確認框架範圍 後續要拿掉 */
+    body {
+        text-align: center;
+    }
+
     div[class|="col"] {
         background-color: var(--mc04);
         border: 0.5px solid purple;
@@ -56,13 +60,13 @@
             </div>
             <div class="col-2 d-none d-md-block"></div>
         </div>
-    </div>
-    <div class="container">
         <div class="row mainbar">
             <div class="col">
                 @include('layout.mainbar')
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row context">
             <div class="col-3 context_sidebar">
                 <div class="container">
@@ -87,9 +91,7 @@
                 </div>
             </div>
             <div class="col-9 context_main">
-                <br><br><br><br><br>
-                <p>主要資訊</p>
-                <br><br><br><br>
+                @yield('page')
             </div>
         </div>
         <div class="row footer">

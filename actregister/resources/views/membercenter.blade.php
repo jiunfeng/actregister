@@ -1,0 +1,9 @@
+@extends('layout.app')
+@section('title')
+會員中心
+@endsection
+@section('page')
+<br><br><br><br><br>
+<p>會員中心</p>
+<br><br><br><br>
+@endsection
