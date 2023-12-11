@@ -1,10 +1,25 @@
 version: '3.6'
 services:
-  apache2:
-    image: ubuntu/apache2:edge
-    container_name: apache
-    volumes:
-      - ../actregister:/var/www/html
-    command: [ "tail", "-f", "/dev/null" ]
+  # apache2:
+  #   image: ubuntu/apache2:edge
+  #   container_name: apache
+  #   volumes:
+  #     - ../actregister:/var/www/html
+  #   command: [ "tail", "-f", "/dev/null" ]
+  #   ports:
+  #     - 8081:80
+  db:
+    image: mariadb:10.6
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
     ports:
       - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
