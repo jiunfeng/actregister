@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\membersignup;
 use App\Http\Controllers\mainbar\{
     AnnouncementsController,
     NewsController,
@@ -38,3 +39,6 @@ Route::get('signup', [SignupController::class, 'signup'])->name('signup');
 Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter');
 Route::get('questionsanswers', [QuestionsAnswersController::class, 'questionsanswers'])->name('questionsanswers');
 Route::get('contactus', [ContactUsController::class, 'contactus'])->name('contactus');
+Route::get('membersignup', [membersignup::class, 'membersignup'])->name('membersignup');
+
+//會員註冊

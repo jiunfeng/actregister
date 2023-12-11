@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/colors_fronts.css')}}">
+    {{-- 時間選擇器 --}}
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css"
+        crossorigin="anonymous" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js"
+        crossorigin="anonymous"></script>
     {{-- 其他模板套用時更換title --}}
     <title>@hasSection ('title')
         @yield('title')

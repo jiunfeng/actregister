@@ -1,0 +1,9 @@
+@extends('layout.app')
+@section('title')
+會員註冊
+@endsection
+@section('page')
+<br><br><br><br><br>
+<p>會員註冊</p>
+<br><br><br><br>
+@endsection
