@@ -39,6 +39,7 @@ Route::get('signup', [SignupController::class, 'signup'])->name('signup');
 Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter');
 Route::get('questionsanswers', [QuestionsAnswersController::class, 'questionsanswers'])->name('questionsanswers');
 Route::get('contactus', [ContactUsController::class, 'contactus'])->name('contactus');
-Route::get('membersignup', [membersignup::class, 'membersignup'])->name('membersignup');
+Route::get('membersignup', [membersignup::class, 'membersignuplayout'])->name('membersignuplayout');
 
 //會員註冊
+Route::post('users/', [membersignup::class, 'membersignup'])->name('mambersignup1');
