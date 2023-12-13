@@ -9,13 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/colors_fronts.css')}}">
-    {{-- 時間選擇器 --}}
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css"
-        crossorigin="anonymous" />
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js"
-        crossorigin="anonymous"></script>
+    @yield('head')
     {{-- 其他模板套用時更換title --}}
     <title>@hasSection ('title')
         @yield('title')
@@ -47,6 +41,30 @@
         margin-top: 50px;
 
 
+    }
+
+
+    .memberformtitle {
+        color: #e5793b;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        border-bottom: 3px dashed #999;
+        font-size: 3vh;
+    }
+
+    .memberform .row {
+        padding: 5px;
+        color: white;
+        text-align: left;
+
+    }
+
+    .memberform .btn {
+        margin-top: 20px;
+    }
+
+    .memberform .error {
+        color: red;
     }
 </style>
 
@@ -102,7 +120,7 @@
             </div>
         </div>
         <div class="row footer">
-            <div class="col">
+            <div class="col-12">
                 <br><br><br>
                 <p>頁尾</p>
                 <br><br><br>
@@ -111,5 +129,8 @@
     </div>
 
 </body>
+
+@yield('scripts')
+
 
 </html>

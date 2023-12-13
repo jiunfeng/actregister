@@ -1,5 +1,5 @@
 <style>
-    .btn {
+    .mainbar .btn {
         background-image: url('{{asset("img/mainbra_button.png")}}');
         background-size: cover;
         /* 以 cover 值自動縮放背景圖片以填滿整個元素 */

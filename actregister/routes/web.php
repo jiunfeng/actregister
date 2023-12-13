@@ -42,4 +42,4 @@ Route::get('contactus', [ContactUsController::class, 'contactus'])->name('contac
 Route::get('membersignup', [membersignup::class, 'membersignuplayout'])->name('membersignuplayout');
 
 //會員註冊
-Route::post('users/', [membersignup::class, 'membersignup'])->name('mambersignup1');
+Route::post('users/', [membersignup::class, 'membersignup'])->name('mambersignup');
