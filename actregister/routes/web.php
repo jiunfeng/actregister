@@ -10,7 +10,7 @@ use App\Http\Controllers\mainbar\{
     QuestionsAnswersController,
     ContactUsController
 };
-
+use App\Http\Controllers\members\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +43,12 @@ Route::get('membersignup', [membersignup::class, 'membersignuplayout'])->name('m
 
 //會員註冊
 Route::post('users/', [membersignup::class, 'membersignup'])->name('mambersignup');
+// 會員登入
+// 路由群組name要在最後加上.才可以找得到
+Route::name('members.')->prefix('members')->group(
+    function () {
+
+        Route::get('/', [LoginController::class, 'loginlayout'])->name('loginlayout');
+        Route::post('/login', [LoginController::class, 'login'])->name('login');
+    }
+);

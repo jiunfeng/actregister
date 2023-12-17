@@ -39,6 +39,7 @@ class membersignup extends Controller
             'Address' => $req->address,
             'Birthdate' => $req->birthdate
         ]);
-        $member->save();
+        session(['userinfo' => $req->request->all()]);
+        dd($validator);
     }
 }

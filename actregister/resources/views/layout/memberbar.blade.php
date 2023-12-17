@@ -34,7 +34,7 @@
         測試用session
         ! 記得要刪除
         --}}
-        @php    
+        @php
         // session(['mySessionVariable' => 'Hello, Marcus!']);
         @endphp
 
