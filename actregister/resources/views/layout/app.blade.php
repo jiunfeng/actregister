@@ -24,11 +24,11 @@
         text-align: center;
     }
 
-    div[class|="col"] {
+    /* div[class|="col"] {
         background-color: var(--mc04);
         border: 0.5px solid purple;
         text-align: center;
-    }
+    } */
 
     /* 輪播高度自適應 */
     .d-block {
@@ -93,29 +93,39 @@
     </div>
     <div class="container">
         <div class="row context">
-            <div class="col-3 context_sidebar">
+            <div class="col-3 context_sidebar d-none d-sm-block">
                 <div class="container">
                     <div class="row sidebar01">
-                        <div class="col">
-                            <img src="https://fakeimg.pl/200x150/200" alt="">
-                            <img src="https://fakeimg.pl/200x150/200" alt="">
-                            <img src="https://fakeimg.pl/200x150/200" alt="">
-
+                        <div class="col mt-5">
+                            <a href="https://www.giant-bicycles.com/tw">
+                                <img src="{{ asset('img/logo/gaint.png') }}" alt="" class="img-fluid mb-5">
+                            </a>
+                            <a href="https://www.colnago.com/bikes/road-bike/">
+                                <img src="{{ asset('img/logo/colnago.png') }}" alt="" class="img-fluid mb-5">
+                            </a>
+                            <a href="https://www.scottusa.com.tw/">
+                                <img src="{{ asset('img/logo/scott.png') }}" alt="" class="img-fluid mb-5">
+                            </a>
                         </div>
 
                     </div>
                     <div class="row sidebar02">
                         <div class="col">
-                            <h3>其他服務</h3>
-                            <br><br>
-                            <p>sidebar02</p>
-                            <br><br>
+                            <h3 class="text-center ps-0 ">其他服務</h3>
+                            <ul class="text-start">
+                                <li>團報申請單</li>
+                                <li>家長同意書</li>
+                                <li>意外險申請表單</li>
+                            </ul>
+
                         </div>
+
+
 
                     </div>
                 </div>
             </div>
-            <div class="col-9 context_main">
+            <div class="col">
                 @yield('page')
             </div>
         </div>
