@@ -24,11 +24,11 @@
         text-align: center;
     }
 
-    /* div[class|="col"] {
+    div[class|="col"] {
         background-color: var(--mc04);
         border: 0.5px solid purple;
         text-align: center;
-    } */
+    }
 
     /* 輪播高度自適應 */
     .d-block {
@@ -66,8 +66,21 @@
     .memberform .error {
         color: red;
     }
+
+    .footer .col-12 {
+        background-color: black;
+        color: white;
+    }
+
+    .context_sidebar {
+        background-image: url("{{asset('img/sidebarbg.png')}}");
+        background-size: cover;
+        /* 透明度 */
+        opacity: 0.5;
+    }
 </style>
 
+{{-- --}}
 
 <body>
     <div class="container-fluid">
@@ -97,8 +110,8 @@
                 <div class="container">
                     <div class="row sidebar01">
                         <div class="col mt-5">
-                            <a href="https://www.giant-bicycles.com/tw">
-                                <img src="{{ asset('img/logo/gaint.png') }}" alt="" class="img-fluid mb-5">
+                            <a href="https://www.sportmania.asia/categories/%E8%87%AA%E8%A1%8C%E8%BB%8Abikes">
+                                <img src="{{ asset('img/logo/trek.png') }}" alt="" class="img-fluid mb-5">
                             </a>
                             <a href="https://www.colnago.com/bikes/road-bike/">
                                 <img src="{{ asset('img/logo/colnago.png') }}" alt="" class="img-fluid mb-5">
@@ -131,9 +144,17 @@
         </div>
         <div class="row footer">
             <div class="col-12">
-                <br><br><br>
-                <p>頁尾</p>
-                <br><br><br>
+                <div class="row justify-content-between">
+                    <div class="col-6 mt-1 text-start">402 台中市南區工學八十七街1688巷987號<br>
+                        上班時間：週一 10:00 am〜11:00 am <br>
+                        TEL：886 - 4 - 2987-1688 ； FAX：886 - 4 - 2287-1687 <br>
+                        客服信箱：ksb@ksbbike.org <br>
+                        退費信箱：service@twbike.org</div>
+                    <div class="col-5 mt-1 text-end">© 2023 Kaka Super Bike 卡司比超級自行車. <br> All Rights Reserved.
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
