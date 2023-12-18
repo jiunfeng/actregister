@@ -73,10 +73,10 @@
     }
 
     .context_sidebar {
-        background-image: url("{{asset('img/sidebarbg.png')}}");
+        background-image: url("{{asset('img/sidebarbg1.png')}}");
         background-size: cover;
-        /* 透明度 */
-        opacity: 0.5;
+        /* 透明度 已修圖 使用此屬性會使容器整個都透明*/
+        /* opacity: 0.5; */
     }
 </style>
 

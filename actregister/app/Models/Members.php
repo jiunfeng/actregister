@@ -10,12 +10,12 @@ class Members extends Model
     use HasFactory;
 
     protected $table = 'Member';
-    protected $primaryKey = 'ID';
+    protected $primaryKey = 'id';
 
     // 主键是否自增
     public $incrementing = true;
 
-    // protected $fillable = ['UserName', 'Gender', 'Email', 'Password', 'Mobile', 'Address', 'Birthdate'];
+    protected $fillable = ['UserName', 'Gender', 'Email', 'Password', 'Mobile', 'Address', 'Birthdate'];
     protected $guarded = [];
     // 模型的主键
 
