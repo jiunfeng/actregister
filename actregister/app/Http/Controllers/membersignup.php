@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Members;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Hash;
 
 class membersignup extends Controller
 {
@@ -34,12 +36,20 @@ class membersignup extends Controller
             'UserName' => $req->username,
             'Gender' => $req->gender,
             'Email' => $req->email,
-            'Password' => $req->password,
+            'Password' => Hash::make($req->password),
             'Mobile' => $req->mobile,
             'Address' => $req->address,
             'Birthdate' => $req->birthdate
         ]);
-        session(['userinfo' => $req->request->all()]);
-        dd($validator);
+
+        session()->regenerate();
+        $credentials = [
+            'email' => $req->input('email'),
+            'password' => $req->input('password')
+        ];
+        Auth::attempt($credentials);
+
+
+        return redirect()->route('news');
     }
 }

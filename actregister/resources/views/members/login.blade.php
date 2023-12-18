@@ -28,10 +28,22 @@ KSB報名網-登入
                 <input type="password" id="password" name="password" class="form-control">
             </div>
         </div>
+        @if(session('error'))
+        <div class="row justify-content-center">
+            <div class="col-5 mt-2">
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            </div>
+        </div>
+
+        @endif
+
         <div class="row justify-content-center">
             <div class="col-5 mt-2">
                 <button type="submit" class="btn btn-primary">登入</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="123"
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a
+                        href="{{route('membersignuplayout')}}"
                         style="color: white;text-decoration: none;">加入會員</a></button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="123"
                         style="color: white;text-decoration: none;">忘記密碼</a></button>

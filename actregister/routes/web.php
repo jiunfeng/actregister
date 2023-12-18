@@ -29,14 +29,14 @@ Route::get('/', function () {
 
 Route::get('index', function () {
     return view('layout.app');
-});
+})->name('home');
 
 // web mainbar 路由控制
 
 Route::get('news', [NewsController::class, 'news'])->name('news');
 Route::get('announcements', [AnnouncementsController::class, 'announcements'])->name('announcements');
 Route::get('signup', [SignupController::class, 'signup'])->name('signup');
-Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter');
+Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter')->middleware('auth');
 Route::get('questionsanswers', [QuestionsAnswersController::class, 'questionsanswers'])->name('questionsanswers');
 Route::get('contactus', [ContactUsController::class, 'contactus'])->name('contactus');
 Route::get('membersignup', [membersignup::class, 'membersignuplayout'])->name('membersignuplayout');
@@ -50,5 +50,6 @@ Route::name('members.')->prefix('members')->group(
 
         Route::get('/', [LoginController::class, 'loginlayout'])->name('loginlayout');
         Route::post('/login', [LoginController::class, 'login'])->name('login');
+        Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     }
 );

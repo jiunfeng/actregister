@@ -37,12 +37,18 @@
         @php
         // session(['mySessionVariable' => 'Hello, Marcus!']);
         @endphp
-
-        @if(session()->has('mySessionVariable'))
-        <span class="fs-6">{{ session('mySessionVariable') }}
+        @auth
+        <span class="fs-6">{{ auth()->user()->UserName }}!
         </span>
-
+        <a href="{{ route('members.logout') }}"> 登出</a>
+        {{-- <form action="{{ route('members.logout') }}" method="post">
+            @csrf
+            <button type="submit">Logout</button>
+        </form> --}}
         @else
+
+
+
 
         {{-- login --}}
         <button class="baradjust login_button fw-900 d-none d-sm-block" type="button" data-bs-toggle="modal"
@@ -59,23 +65,34 @@
 
                     </div>
                     {{-- login form --}}
-                    <form>
+                    <form action="{{route('members.login')}}" method="POST">
+                        @csrf
                         <div class="modal-body">
                             <div class="row mb-3">
                                 <label for="login-name" class="col-2 col-form-label col-form-label-sm">E-mail:</label>
                                 <div class="col-8">
-                                    <input type="email" id="login-name" class="form-control form-control-sm"
-                                        placeholder="name@example.com" required>
+                                    <input type="email" name="email" id="login-name"
+                                        class="form-control form-control-sm" placeholder="name@example.com" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="login-password"
                                     class="col-2 col-form-label col-form-label-sm">Password:</label>
                                 <div class="col-4"><input type="password" class="form-control form-control-sm"
-                                        id="login-password" required></div>
+                                        id="login-password" name="password" required></div>
 
                             </div>
                         </div>
+                        @if(session('error'))
+                        <div class="row justify-content-center">
+                            <div class="col-5 mt-2">
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            </div>
+                        </div>
+
+                        @endif
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">登入</button>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="123"
@@ -89,7 +106,7 @@
             </div>
         </div>
         {{-- login end --}}
-        @endif
+        @endauth
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
