@@ -24,11 +24,11 @@
         text-align: center;
     } */
 
-    div[class|="col"] {
+    /* div[class|="col"] {
         background-color: var(--mc04);
         border: 0.5px solid purple;
-        /* text-align: center; */
-    }
+        text-align: center;
+    } */
 
     /* 輪播高度自適應 */
     .d-block {
@@ -77,6 +77,12 @@
         background-size: cover;
         /* 透明度 已修圖 使用此屬性會使容器整個都透明*/
         /* opacity: 0.5; */
+    }
+
+    .page-area {
+        /* 漸層色調整上到下 */
+        background: linear-gradient(to bottom, #999, #57758d);
+
     }
 </style>
 
@@ -138,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col page-area">
                 @yield('page')
             </div>
         </div>
