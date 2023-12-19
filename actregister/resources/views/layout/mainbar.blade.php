@@ -20,7 +20,7 @@
         background-position: center center;
     }
 </style>
-<div class="mainbar d-none d-sm-block">
+<div class="mainbar d-none d-sm-block text-center">
     <button type="button" class="btn"><a href="{{route('news')}}">首頁</a></button>
     <button type="button" class="btn"><a href="{{route('news')}}">最新消息</a></button>
     <button type="button" class="btn"><a href="{{route('announcements')}}">賽事公告</a></button>

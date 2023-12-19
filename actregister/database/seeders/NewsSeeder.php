@@ -18,12 +18,12 @@ class NewsSeeder extends Seeder
     public function run(): void
     {
         // 插入五筆示例數據
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             News::create([
                 'title' => "Sample Title $i",
                 'text' => "Sample Content $i",
                 'weights' => mt_rand(1, 100),
-                'releaseDate' => now(),
+                'releaseDate' => '2023-' . mt_rand(1, 12) . '-' . mt_rand(1, 30),
             ]);
         }
     }

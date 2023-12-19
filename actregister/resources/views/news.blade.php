@@ -11,9 +11,14 @@
     .list-group-item .btn-primary {
         background-color: transparent;
     }
+
+    /* 分頁選項置中 */
+    .newslink .pagination {
+        justify-content: center;
+    }
 </style>
 
-<h5 style="margin-top: 10vh;">最新消息</h5>
+<h5 class="text-center" style="margin-top: 10vh;">最新消息</h5>
 
 <ul class="list-group m-5">
     @foreach ($newsData as $item )
@@ -50,6 +55,12 @@
 
     @endforeach
 </ul>
+{{-- 分頁選項處理 --}}
+<div class="row flex-column newslink">
+    <div class="col-6 align-self-center">
+        {{ $newsData->links() }}
+    </div>
+</div>
 
 
 

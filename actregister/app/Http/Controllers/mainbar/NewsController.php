@@ -10,7 +10,8 @@ class NewsController extends Controller
 {
     public function news()
     {
-        $data = News::orderBy('weights')->get()->toArray();
+        // 需要在AppServiceProvider.php將paginate使用bootstrap
+        $data = News::orderBy('weights')->paginate(5);
         // dd($data);
         return view('news', ['newsData' => $data]);
     }

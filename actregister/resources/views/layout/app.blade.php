@@ -20,14 +20,14 @@
 
 <style>
     /* 開發途中使用 用來確認框架範圍 後續要拿掉 */
-    body {
+    /* body {
         text-align: center;
-    }
+    } */
 
     div[class|="col"] {
         background-color: var(--mc04);
         border: 0.5px solid purple;
-        text-align: center;
+        /* text-align: center; */
     }
 
     /* 輪播高度自適應 */
@@ -93,7 +93,7 @@
         </div>
         <div class="row carousel">
             <div class="col-2 d-none d-md-block"></div>
-            <div class="col-8 d-none d-md-block">
+            <div class="col-8 d-none d-md-block ">
                 @include('layout.carousel')
             </div>
             <div class="col-2 d-none d-md-block"></div>
