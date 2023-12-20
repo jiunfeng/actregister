@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\membersignup;
 use App\Http\Controllers\mainbar\{
-    AnnouncementsController,
+
     NewsController,
     SignupController,
     MemberCenterController,
@@ -34,7 +34,7 @@ Route::get('index', function () {
 // web mainbar 路由控制
 
 Route::get('news', [NewsController::class, 'news'])->name('news');
-Route::get('announcements', [AnnouncementsController::class, 'announcements'])->name('announcements');
+
 Route::get('signup', [SignupController::class, 'signup'])->name('signup');
 Route::post('signupGame', [SignupController::class, 'signupGame'])->name('signupGame');
 Route::get('membercenter', [MemberCenterController::class, 'membercenter'])->name('membercenter')->middleware('auth');
