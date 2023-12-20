@@ -12,25 +12,25 @@ KSB報名網-登入
     <form action="{{ route('members.login') }}" method="POST">
         @csrf
         <div class="row justify-content-center">
-            <div class="col-5 ">會員登入
+            <div class="col-8 mt-5">會員登入
                 <hr>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-5">
+            <div class="col-8">
                 <label for="login" class="form-label">E-mail:</label>
                 <input type="email" id="login" name="email" class="form-control">
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-5">
+            <div class="col-8">
                 <label for="password" class="form-label">Password:</label>
                 <input type="password" id="password" name="password" class="form-control">
             </div>
         </div>
         @if(session('error'))
         <div class="row justify-content-center">
-            <div class="col-5 mt-2">
+            <div class="col-8 mt-2">
                 <div class="alert alert-danger">
                     {{ session('error') }}
                 </div>
@@ -39,8 +39,8 @@ KSB報名網-登入
 
         @endif
 
-        <div class="row justify-content-center">
-            <div class="col-5 mt-2">
+        <div class="row justify-content-center ms-1 me-1">
+            <div class="col-8 mt-2">
                 <button type="submit" class="btn btn-primary">登入</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a
                         href="{{route('membersignuplayout')}}"

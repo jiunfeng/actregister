@@ -11,8 +11,8 @@
 </style>
 <form action="editpassword">
     <div class="container mt-5">
-        <div class="row text-center">
-            <div class="col-6">會員資料</div>
+        <div class="row text-center mt-5">
+            <div class="col-6 mt-3">會員資料</div>
         </div>
         <div class="row justify-content-start m-2">
             <label for="username" class="col-2 form-label">會員姓名:</label>

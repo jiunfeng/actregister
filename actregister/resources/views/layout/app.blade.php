@@ -110,7 +110,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container fs-md-1">
         <div class="row context">
             <div class="col-3 context_sidebar d-none d-sm-block">
                 <div class="container">
@@ -149,14 +149,14 @@
             </div>
         </div>
         <div class="row footer">
-            <div class="col-12">
+            <div class="col-12 fs-6">
                 <div class="row justify-content-between">
                     <div class="col-6 mt-1 text-start">402 台中市南區工學八十七街1688巷987號<br>
                         上班時間：週一 10:00 am〜11:00 am <br>
                         TEL：886 - 4 - 2987-1688 ； FAX：886 - 4 - 2287-1687 <br>
                         客服信箱：ksb@ksbbike.org <br>
                         退費信箱：service@twbike.org</div>
-                    <div class="col-5 mt-1 text-end">© 2023 Kaka Super Bike 卡司比超級自行車. <br> All Rights Reserved.
+                    <div class="col-5 mt-1 text-end">© 2023 Kaka Super Bike <br>卡司比超級自行車. <br> All Rights Reserved.
                     </div>
                 </div>
 
