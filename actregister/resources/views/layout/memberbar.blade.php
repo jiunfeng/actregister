@@ -51,7 +51,7 @@
 
 
         {{-- login --}}
-        <button class="baradjust login_button fw-900 d-none d-sm-block" type="button" data-bs-toggle="modal"
+        <button class="baradjust login_button fw-900" type="button" data-bs-toggle="modal"
             data-bs-target="#loginModal"><u>Login</u></button>
         <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">

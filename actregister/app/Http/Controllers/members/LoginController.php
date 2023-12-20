@@ -40,7 +40,7 @@ class LoginController extends Controller
 
             // 重新導向
 
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('news'));
         } else {
 
             return back()->with('error', '帳號或密碼錯誤。');
@@ -61,6 +61,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route('news'));
     }
 }

@@ -17,13 +17,14 @@ return new class extends Migration
             $table->comment('會員資料表');
             $table->integer('id', true)->comment('流水號id');
             $table->string('UserName', 10)->comment('會員姓名');
-            $table->string('Gender', 5)->comment('性別');
+            $table->string('Gender', 10)->comment('性別');
             $table->string('email', 50)->comment('電子信箱');
             $table->string('password', 60)->comment('用戶密碼');
             $table->string('Mobile', 10)->comment('連絡電話');
             $table->string('Address', 100)->comment('地址物資寄送用');
             $table->date('Birthdate')->comment('出生年月日');
-            $table->timestamps();
+            $table->timestamp('updated_at')->useCurrentOnUpdate()->useCurrent()->comment('更新時間');
+            $table->timestamp('created_at')->default('0000-00-00 00:00:00')->comment('創立時間');
         });
     }
 

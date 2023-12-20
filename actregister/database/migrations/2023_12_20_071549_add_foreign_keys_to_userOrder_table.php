@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('userOrder', function (Blueprint $table) {
-            $table->foreign(['user_email'], 'user')->references(['email'])->on('users')->onUpdate('CASCADE')->onDelete('CASCADE');
             $table->foreign(['order_id'], 'order')->references(['id'])->on('orderItems')->onUpdate('CASCADE')->onDelete('CASCADE');
+            $table->foreign(['user_id'], 'user')->references(['id'])->on('Member')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('userOrder', function (Blueprint $table) {
-            $table->dropForeign('user');
             $table->dropForeign('order');
+            $table->dropForeign('user');
         });
     }
 };

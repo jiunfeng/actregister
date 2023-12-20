@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('Contact', function (Blueprint $table) {
-            $table->integer('id', true);
-            $table->string('emailtitle', 32);
-            $table->string('emailuser', 10);
-            $table->string('emailtext', 1000);
-            $table->timestamps();
+        Schema::create('password_reset_tokens', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Contact');
+        Schema::dropIfExists('password_reset_tokens');
     }
 };
