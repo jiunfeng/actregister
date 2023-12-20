@@ -116,40 +116,31 @@
             {{-- member存在的導覽列 --}}
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll d-block d-sm-none"
                 style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
 
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">首頁</a>
                 </li>
                 <li class="nav-item">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">最新消息</a>
+                    <a class="nav-link" href="{{route('news')}}">最新消息</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('signup')}}">線上報名</a>
                 </li>
                 <li class="nav-item">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">賽事公告</a>
+                    <a class="nav-link" href="{{route('membercenter')}}">會員中心</a>
                 </li>
                 <li class="nav-item">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">線上報名</a>
+                    <a class="nav-link" href="{{route('questionsanswers')}}">Ｑ＆Ａ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">會員中心</a>
+                    <a class="nav-link" href="{{route('contactus')}}">聯絡我們</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ｑ＆Ａ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">聯絡我們</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">後台模式</a>
+                    <a class="nav-link disabled" aria-disabled="true" hidden>後台模式</a>
                 </li>
             </ul>
             {{-- member存在的導覽列 end--}}
