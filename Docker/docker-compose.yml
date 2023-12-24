@@ -23,3 +23,11 @@ services:
       - 8080:80
     environment:
       - PMA_ARBITRARY=1
+
+  apache2:
+    image: ubuntu/apache2
+    restart: always
+    ports:
+      - 8081:80
+    volumes:
+      - ../actregister/:/var/www/html/actregister
